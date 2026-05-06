@@ -1,0 +1,76 @@
+ **********
+ **    1 **SET PRINT     .000    
+ **********
+ **********
+ **    2 **SET NOWARN 
+ **********
+
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 'Prefactor '    1.0000       1.0000          .0000       10.000    
+     2 'Normalizat'    1.0000       1.0000         .10000E-01   10.000    
+ **********
+ **    3 **SET ERR    .5000    
+ **********
+ **********
+ **    4 **SET GRAD    1.000    
+ **********
+ **********
+ **    5 **MINIMIZE    400.0       2.000    
+ **********
+
+ MIGRAD MINIMIZATION HAS CONVERGED.
+
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+
+ FCN=   2123.129     FROM MIGRAD    STATUS=CONVERGED     54 CALLS       55 TOTAL
+                     EDM=   .70E-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME        VALUE          ERROR          SIZE      DERIVATIVE 
+   1  Prefactor     1.6016        .28440        .78910E-01   -.34214E-02
+   2  Normalizat   10.0000        .49432E-01    .14336    ** at limit **
+                               ERR DEF=  .500    
+Final values: 
+  Prefactor  = 1.60165
+  Normalizat = 10
+ **********
+ **    6 **HESSE 
+ **********
+
+ FCN=   2123.129     FROM HESSE     STATUS=OK            10 CALLS       65 TOTAL
+                     EDM=   .70E-07    STRATEGY= 1      ERROR MATRIX ACCURATE 
+
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME        VALUE          ERROR       STEP SIZE       VALUE   
+   1  Prefactor     1.6016        .28380        .34903E-03    24.385    
+   2  Normalizat   10.0000        .49430E-01    .31656E-02    26.704    
+                                 WARNING -   - ABOVE PARAMETER IS AT LIMIT.
+                               ERR DEF=  .500    
+Minuit fit quality: 3   estimated distance: 7.03332e-08
+Minuit parameter uncertainties:
+  1  0.284083
+  2  6.34276e-07
+Computing TS values for each source (2 total)
+
+Photon fluxes are computed for the energy range 100 to 100000 MeV
+
+gll_iem_v07:
+Prefactor: 1.60165 +/- 0.284083
+Index: 1
+Scale: 100
+Npred: 78.7188
+Flux: 0.00418314 +/- 0.000741992 photons/cm^2/s
+
+iso_P8R3_SOURCE_V3_v1:
+Normalization: 10 +/- 6.34276e-07
+Npred: 78.2946
+Flux: 0.00122849 +/- 7.79064e-11 photons/cm^2/s
+
+
+Total number of observed counts: 258
+Total number of model events: 157.013
+
+-log(Likelihood): 2123.129059
+
+Elapsed CPU time: 7.747919

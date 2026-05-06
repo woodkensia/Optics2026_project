@@ -1,0 +1,75 @@
+ **********
+ **    1 **SET PRINT     .000    
+ **********
+ **********
+ **    2 **SET NOWARN 
+ **********
+
+ PARAMETER DEFINITIONS:
+    NO.   NAME         VALUE      STEP SIZE      LIMITS
+     1 'Prefactor '    1.0000       1.0000          .0000       10.000    
+     2 'Normalizat'    1.0000       1.0000         .10000E-01   10.000    
+ **********
+ **    3 **SET ERR    .5000    
+ **********
+ **********
+ **    4 **SET GRAD    1.000    
+ **********
+ **********
+ **    5 **MINIMIZE    400.0       2.000    
+ **********
+
+ MIGRAD MINIMIZATION HAS CONVERGED.
+
+ MIGRAD WILL VERIFY CONVERGENCE AND ERROR MATRIX.
+
+ FCN=   42800.05     FROM MIGRAD    STATUS=CONVERGED     60 CALLS       61 TOTAL
+                     EDM=   .91E-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+
+  EXT PARAMETER                                   STEP         FIRST   
+  NO.   NAME        VALUE          ERROR          SIZE      DERIVATIVE 
+   1  Prefactor     .90404E-01    .34061E-02    .14737E-01    .14395    
+   2  Normalizat    5.1430        .12331        .10085        .43162E-01
+                               ERR DEF=  .500    
+Final values: 
+  Prefactor  = 0.0904038
+  Normalizat = 5.14298
+ **********
+ **    6 **HESSE 
+ **********
+
+ FCN=   42800.05     FROM HESSE     STATUS=OK            10 CALLS       71 TOTAL
+                     EDM=   .91E-06    STRATEGY= 1      ERROR MATRIX ACCURATE 
+
+  EXT PARAMETER                                INTERNAL      INTERNAL  
+  NO.   NAME        VALUE          ERROR       STEP SIZE       VALUE   
+   1  Prefactor     .90404E-01    .34855E-02    .64937E-04   -1063.2    
+   2  Normalizat    5.1430        .12623        .44568E-03   -18.822    
+                               ERR DEF=  .500    
+Minuit fit quality: 3   estimated distance: 9.11327e-07
+Minuit parameter uncertainties:
+  1  0.00348552
+  2  0.126248
+Computing TS values for each source (2 total)
+
+Photon fluxes are computed for the energy range 100 to 100000 MeV
+
+gll_iem_v07:
+Prefactor: 0.0904038 +/- 0.00348552
+Index: 1
+Scale: 100
+Npred: 1561.94
+Flux: 0.000236114 +/- 9.10379e-06 photons/cm^2/s
+
+iso_P8R3_SOURCE_V3_v1:
+Normalization: 5.14298 +/- 0.126248
+Npred: 2858.12
+Flux: 0.00063181 +/- 1.55067e-05 photons/cm^2/s
+
+
+Total number of observed counts: 4420
+Total number of model events: 4420.06
+
+-log(Likelihood): 42800.05428
+
+Elapsed CPU time: 7.231814

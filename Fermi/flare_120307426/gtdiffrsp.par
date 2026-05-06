@@ -1,0 +1,19 @@
+#
+# $Header: /nfs/slac/g/glast/ground/cvs/Likelihood/pfiles/gtdiffrsp.par,v 1.13 2013/08/26 22:55:32 jchiang Exp $
+#
+evfile,f,a,"120307426_final.fits",,,"Event data file"
+evtable,s,h,"EVENTS",,,"Event data extension"
+scfile,f,a,"L260505235605F357373F25_SC00.fits",,,"Spacecraft data file"
+sctable,s,h,"SC_DATA",,,"Spacecraft data extension"
+srcmdl,fr,a,"../source_model.xml",,,"Source model file"
+irfs,s,a,"CALDB",,,"Response functions to use"
+evclsmin,i,h,0,,,"Minimum event class level"
+evclass,i,h,INDEF,,,"Target class level"
+evtype,i,h,INDEF,,,"Event type selections"
+convert,b,h,no,,,"convert header to new diffrsp format?"
+
+chatter,i,h,2,0,4,Output verbosity
+clobber,        b, h, no, , , "Overwrite existing output files"
+debug,          b, h, no, , , "Activate debugging mode"
+gui,            b, h, no, , , "GUI mode activated"
+mode,           s, h, "ql", , , "Mode of automatic parameters"
